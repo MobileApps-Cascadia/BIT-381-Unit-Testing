@@ -14,6 +14,8 @@
 		E4F1E6D52A3281E600BC9C86 /* Unit_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F1E6D42A3281E600BC9C86 /* Unit_TestingTests.swift */; };
 		E4F1E6DF2A3281E600BC9C86 /* Unit_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F1E6DE2A3281E600BC9C86 /* Unit_TestingUITests.swift */; };
 		E4F1E6E12A3281E600BC9C86 /* Unit_TestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F1E6E02A3281E600BC9C86 /* Unit_TestingUITestsLaunchTests.swift */; };
+		E4F1E6EF2A3282BA00BC9C86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F1E6EE2A3282BA00BC9C86 /* Utils.swift */; };
+		E4F1E6F02A3282BA00BC9C86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F1E6EE2A3282BA00BC9C86 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		E4F1E6DA2A3281E600BC9C86 /* Unit_TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit_TestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F1E6DE2A3281E600BC9C86 /* Unit_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_TestingUITests.swift; sourceTree = "<group>"; };
 		E4F1E6E02A3281E600BC9C86 /* Unit_TestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_TestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4F1E6EE2A3282BA00BC9C86 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 		E4F1E6C22A3281E400BC9C86 /* Unit_Testing */ = {
 			isa = PBXGroup;
 			children = (
+				E4F1E6ED2A3282A200BC9C86 /* Utils */,
 				E4F1E6C32A3281E400BC9C86 /* Unit_TestingApp.swift */,
 				E4F1E6C52A3281E400BC9C86 /* ContentView.swift */,
 				E4F1E6C72A3281E600BC9C86 /* Assets.xcassets */,
@@ -125,6 +129,14 @@
 				E4F1E6E02A3281E600BC9C86 /* Unit_TestingUITestsLaunchTests.swift */,
 			);
 			path = Unit_TestingUITests;
+			sourceTree = "<group>";
+		};
+		E4F1E6ED2A3282A200BC9C86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4F1E6EE2A3282BA00BC9C86 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +271,7 @@
 			files = (
 				E4F1E6C62A3281E400BC9C86 /* ContentView.swift in Sources */,
 				E4F1E6C42A3281E400BC9C86 /* Unit_TestingApp.swift in Sources */,
+				E4F1E6EF2A3282BA00BC9C86 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F1E6D52A3281E600BC9C86 /* Unit_TestingTests.swift in Sources */,
+				E4F1E6F02A3282BA00BC9C86 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,9 +24,15 @@ final class Unit_TestingUITests: XCTestCase {
 
     func testExample() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
 
+
+//        let app = XCUIApplication()
+//        app.launch()
+//        app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+//        app.textFields["Type your name here:"].tap()
+//        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+
+                
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
