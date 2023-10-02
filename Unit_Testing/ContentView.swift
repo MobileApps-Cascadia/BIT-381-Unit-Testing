@@ -19,6 +19,9 @@ struct ContentView: View {
             Text("Type your name here:")
             TextField("Type your name here:", text: $username)
             Text(username)
+                .accessibilityLabel("UserOutput")
+//                .accessibilityIdentifier("UserOutput")
+                
         }
         .padding()
     }

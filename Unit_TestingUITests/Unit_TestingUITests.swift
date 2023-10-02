@@ -25,17 +25,28 @@ final class Unit_TestingUITests: XCTestCase {
     func testExample() throws {
         // UI tests must launch the application that they test.
 
-
-//        let app = XCUIApplication()
-//        app.launch()
-//        app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
-//        app.textFields["Type your name here:"].tap()
-//        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        let app = XCUIApplication()
+        app.launch()
+        app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        app.textFields["Type your name here:"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
 
                 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    func testUI() throws {
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        let inputField = app.textFields["Type your name here:"]
+        inputField.tap()
+        inputField.typeText("Hello")
+        let helloStaticText = app.staticTexts["UserOutput"].value as! String
+        print("FOUND: "   + helloStaticText + " ===========================================================================================")
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
@@ -43,5 +54,18 @@ final class Unit_TestingUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    func testUI_nameDisplay() throws{
+        let app = XCUIApplication()
+        app.launch()
+        let typeYourNameHereTextField = app.textFields["Type your name here:"]
+        typeYourNameHereTextField.tap()
+        typeYourNameHereTextField.typeText("Tori Lew")
+        
+        let nameStaticText = app.staticTexts["UserOutput"].value as! String
+        print("FOUND: "   + nameStaticText + " ===========================================================================================")
+        
+
+        XCTAssertEqual(typeYourNameHereTextField.label, nameStaticText, "The text field should BE the same as text view but ISN't")
     }
 }
