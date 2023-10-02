@@ -30,6 +30,18 @@ final class Unit_TestingTests: XCTestCase {
         
         // There are a lot of other assertions available:
         // https://developer.apple.com/documentation/xctest/boolean_assertions
+        XCTAssertNotNil(Factorial(3))
+        XCTAssertNotNil(Factorial(4))
+        XCTAssertNotNil(Factorial(5))
+        XCTAssertEqual(Factorial(3), 6)
+        XCTAssertEqual(Factorial(4), 24)
+        XCTAssertEqual(Factorial(5), 120)
+        XCTAssertNil(Factorial(-3))
+        XCTAssertNil(Factorial(-4))
+        XCTAssertNil(Factorial(-5))
+        XCTAssertEqual(Factorial(-3), nil)
+        XCTAssertEqual(Factorial(-4), nil)
+        XCTAssertEqual(Factorial(-5), nil)
         XCTAssertNil(Factorial(-13))
         XCTAssertNotNil(Factorial(4))
         XCTAssertEqual(Factorial(3), 3 * 2 * 1) // probably more realistic to call a method a second time
@@ -44,7 +56,7 @@ final class Unit_TestingTests: XCTestCase {
             XCTAssertFalse(IsPrime(i), "\(i) should NOT be prime, but it is")
         }
         
-        XCTAssertTrue(IsPrime(-3), "BAD TEST: checking that -3 IS prime, even though it should NOT be prime")
+        XCTAssertFalse(IsPrime(-3), "BAD TEST: checking that -3 IS prime, even though it should NOT be prime")
     }
     
     func test_isPrime_positive() throws {
