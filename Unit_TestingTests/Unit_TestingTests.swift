@@ -62,7 +62,20 @@ final class Unit_TestingTests: XCTestCase {
             XCTAssertFalse(IsPrime(i), "\(i) should NOT be prime, but it is")
         }
     }
+    // add unti test for factorial method
     
+    func testFactorial() throws {
+            XCTAssertEqual(Factorial(3), 6, "Factorial of 3 should be 6")
+            XCTAssertEqual(Factorial(4), 24, "Factorial of 4 should be 24")
+            XCTAssertEqual(Factorial(5), 120, "Factorial of 5 should be 120")
+        }
+    // add unit test testFactorialNegativeInput to check testFactorial function
+    
+    func testFactorialNegativeInputs() throws {
+           XCTAssertNil(Factorial(-3), "Factorial of -3 should be nil")
+           XCTAssertNil(Factorial(-4), "Factorial of -4 should be nil")
+           XCTAssertNil(Factorial(-5), "Factorial of -5 should be nil")
+       }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
