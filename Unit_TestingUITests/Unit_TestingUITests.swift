@@ -47,6 +47,28 @@ final class Unit_TestingUITests: XCTestCase {
         print("FOUND: "   + helloStaticText + " ===========================================================================================")
     }
     
+    
+    let app = XCUIApplication()
+    app.textFields["Type your name here:"].tap()
+    app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+
+    func testUITypingName() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        // Find the TextField and tap it
+        let inputField = app.textFields["Type your name here:"]
+        inputField.tap()
+
+        // Type your name into the TextField
+        inputField.typeText("Your Name")
+
+        // Find the Text() view at the bottom and assert its value
+        let outputText = app.staticTexts["UserOutput"]
+        XCTAssertEqual(outputText.label, "Your Name", "Expected 'UserOutput' to display 'Your Name'")
+    }
+    
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
