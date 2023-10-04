@@ -55,4 +55,18 @@ final class Unit_TestingUITests: XCTestCase {
             }
         }
     }
+    func testKenny() throws {
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        let inputField = app.textFields["Type your name here:"]
+        inputField.tap()
+        inputField.typeText("Kenny Luchau")
+        let helloStaticText = app.staticTexts["UserOutput"].value as! String
+        print("FOUND: "   + helloStaticText + " ===========================================================================================")
+        
+        let outputText = app.staticTexts["UserOutput"]
+        XCTAssertEqual(outputText.label, "Kenny Luchau", "Expected 'UserOutput' to display 'Kenny Luchau'")
+    }
 }

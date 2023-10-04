@@ -82,5 +82,19 @@ final class Unit_TestingTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testFactorial() throws{
+        XCTAssertNotNil(Factorial(3))
+        XCTAssertNotNil(Factorial(4))
+        XCTAssertNotNil(Factorial(5))
+        XCTAssertEqual(Factorial(3), 6)
+        XCTAssertEqual(Factorial(4), 24)
+        XCTAssertEqual(Factorial(5), 120)
+        XCTAssertNil(Factorial(-3))
+        XCTAssertNil(Factorial(-4))
+        XCTAssertNil(Factorial(-5))
+        XCTAssertEqual(Factorial(-3), nil)
+        XCTAssertEqual(Factorial(-4), nil)
+        XCTAssertEqual(Factorial(-5), nil)
+    }
 
 }
