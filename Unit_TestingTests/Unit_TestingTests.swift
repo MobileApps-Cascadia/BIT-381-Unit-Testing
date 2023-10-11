@@ -70,5 +70,15 @@ final class Unit_TestingTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    func test_isFactorialCorrect() throws {
+        XCTAssertTrue((Factorial(3) == 6), "The factorial for 3 should BE 6 but ISN't")
+        XCTAssertTrue((Factorial(4) == 24), "The factorial for 4 should BE 24 but ISN't")
+        XCTAssertTrue((Factorial(5) == 120), "The factorial for 5 should BE 120 but ISN't")
+    }
+    
+    func test_isFactorialNil() throws {
+        XCTAssertTrue((Factorial(-3) == nil), "The factorial for -3 should BE nil but ISN't")
+        XCTAssertTrue((Factorial(-4) == nil), "The factorial for -4 should BE nil but ISN't")
+        XCTAssertTrue((Factorial(-5) == nil), "The factorial for -5 should BE nil but ISN't")
+    }
 }

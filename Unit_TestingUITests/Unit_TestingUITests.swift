@@ -55,4 +55,17 @@ final class Unit_TestingUITests: XCTestCase {
             }
         }
     }
+    func testUI_nameDisplay() throws{
+        let app = XCUIApplication()
+        app.launch()
+        let typeYourNameHereTextField = app.textFields["Type your name here:"]
+        typeYourNameHereTextField.tap()
+        typeYourNameHereTextField.typeText("Tori Lew")
+        
+        let nameStaticText = app.staticTexts["UserOutput"].value as! String
+        print("FOUND: "   + nameStaticText + " ===========================================================================================")
+        
+
+        XCTAssertEqual(typeYourNameHereTextField.label, nameStaticText, "The text field should BE the same as text view but ISN't")
+    }
 }
