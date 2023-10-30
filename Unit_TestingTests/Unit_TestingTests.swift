@@ -9,22 +9,22 @@ import XCTest
 @testable import Unit_Testing
 
 final class Unit_TestingTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-
+        
         XCTAssertTrue(IsPrime(3)) // test passes if IsPrime returns true (as it should!)
         XCTAssert(IsPrime(5))  // Also passes if IsPrime returns true
         
@@ -63,12 +63,25 @@ final class Unit_TestingTests: XCTestCase {
         }
     }
     
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testCheckFacPos() throws {
+        XCTAssertTrue((Factorial(3) == 6), "Factorial of 3 should be 6")
+        XCTAssertTrue((Factorial(4) == 24), "Factorial of 4 should be 24")
+        XCTAssertTrue((Factorial(5) == 120), "Factorial of 5 should be 120")
+    }
+    
+    func testCheckFacNil() throws {
+        XCTAssertNil(Factorial(-3), "Factorial of -3 should be nil")
+        XCTAssertNil(Factorial(-4), "Factorial of -3 should be nil")
+        XCTAssertNil(Factorial(-5), "Factorial of -3 should be nil")
+    }
 
 }
+
